@@ -1,0 +1,15 @@
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\bin\Debug\net8.0\InventoryGame.exe
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\bin\Debug\net8.0\InventoryGame.deps.json
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\bin\Debug\net8.0\InventoryGame.runtimeconfig.json
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\bin\Debug\net8.0\InventoryGame.dll
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\bin\Debug\net8.0\InventoryGame.pdb
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\obj\Debug\net8.0\InventoryGame.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\obj\Debug\net8.0\InventoryGame.AssemblyInfoInputs.cache
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\obj\Debug\net8.0\InventoryGame.AssemblyInfo.cs
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\obj\Debug\net8.0\InventoryGame.csproj.CoreCompileInputs.cache
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\obj\Debug\net8.0\InventoryGame.sourcelink.json
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\obj\Debug\net8.0\InventoryGame.dll
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\obj\Debug\net8.0\refint\InventoryGame.dll
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\obj\Debug\net8.0\InventoryGame.pdb
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\obj\Debug\net8.0\InventoryGame.genruntimeconfig.cache
+c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\obj\Debug\net8.0\ref\InventoryGame.dll
