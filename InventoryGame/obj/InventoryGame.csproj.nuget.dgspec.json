@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\filip.scherlund\\Documents\\Inventory-Game\\InventoryGame\\InventoryGame.csproj": {}
+    "c:\\Users\\Filip.scherlund\\Documents\\VS code Codes\\First-main\\First-main\\InventoryGame\\InventoryGame.csproj": {}
   },
   "projects": {
-    "c:\\Users\\filip.scherlund\\Documents\\Inventory-Game\\InventoryGame\\InventoryGame.csproj": {
+    "c:\\Users\\Filip.scherlund\\Documents\\VS code Codes\\First-main\\First-main\\InventoryGame\\InventoryGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\filip.scherlund\\Documents\\Inventory-Game\\InventoryGame\\InventoryGame.csproj",
+        "projectUniqueName": "c:\\Users\\Filip.scherlund\\Documents\\VS code Codes\\First-main\\First-main\\InventoryGame\\InventoryGame.csproj",
         "projectName": "InventoryGame",
-        "projectPath": "c:\\Users\\filip.scherlund\\Documents\\Inventory-Game\\InventoryGame\\InventoryGame.csproj",
-        "packagesPath": "C:\\Users\\filip.scherlund\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\filip.scherlund\\Documents\\Inventory-Game\\InventoryGame\\obj\\",
+        "projectPath": "c:\\Users\\Filip.scherlund\\Documents\\VS code Codes\\First-main\\First-main\\InventoryGame\\InventoryGame.csproj",
+        "packagesPath": "C:\\Users\\Filip.scherlund\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Filip.scherlund\\Documents\\VS code Codes\\First-main\\First-main\\InventoryGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\filip.scherlund\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Filip.scherlund\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

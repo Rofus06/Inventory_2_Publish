@@ -1,5 +1,5 @@
 is_global = true
-build_property.TargetFramework = net8.0
+build_property.TargetFramework = net7.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
 build_property.ProjectTypeGuids = 
@@ -9,5 +9,3 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = InventoryGame
 build_property.ProjectDir = c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,0 +1,15 @@
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\bin\Debug\net7.0\InventoryGame.exe
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\bin\Debug\net7.0\InventoryGame.deps.json
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\bin\Debug\net7.0\InventoryGame.runtimeconfig.json
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\bin\Debug\net7.0\InventoryGame.dll
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\bin\Debug\net7.0\InventoryGame.pdb
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net7.0\InventoryGame.csproj.AssemblyReference.cache
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net7.0\InventoryGame.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net7.0\InventoryGame.AssemblyInfoInputs.cache
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net7.0\InventoryGame.AssemblyInfo.cs
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net7.0\InventoryGame.csproj.CoreCompileInputs.cache
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net7.0\InventoryGame.dll
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net7.0\refint\InventoryGame.dll
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net7.0\InventoryGame.pdb
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net7.0\InventoryGame.genruntimeconfig.cache
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net7.0\ref\InventoryGame.dll

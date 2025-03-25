@@ -13,3 +13,18 @@ c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\obj\Debug\net8.0
 c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\obj\Debug\net8.0\InventoryGame.pdb
 c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\obj\Debug\net8.0\InventoryGame.genruntimeconfig.cache
 c:\Users\filip.scherlund\Documents\Inventory-Game\InventoryGame\obj\Debug\net8.0\ref\InventoryGame.dll
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\bin\Debug\net8.0\InventoryGame.exe
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\bin\Debug\net8.0\InventoryGame.deps.json
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\bin\Debug\net8.0\InventoryGame.runtimeconfig.json
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\bin\Debug\net8.0\InventoryGame.dll
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\bin\Debug\net8.0\InventoryGame.pdb
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\InventoryGame.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\InventoryGame.AssemblyInfoInputs.cache
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\InventoryGame.AssemblyInfo.cs
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\InventoryGame.csproj.CoreCompileInputs.cache
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\InventoryGame.sourcelink.json
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\InventoryGame.dll
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\refint\InventoryGame.dll
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\InventoryGame.pdb
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\InventoryGame.genruntimeconfig.cache
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\ref\InventoryGame.dll

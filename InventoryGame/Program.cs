@@ -17,13 +17,24 @@ class Game
     private bool inventoryOpen = false;
     private bool inCombat = false;
 
-    public void Run()
+    public void Run() //did not wanna start so i needed to chance the code took me so fucking long!
     {
         ShowMenu();
 
         while (true)
         {
-            ConsoleKeyInfo key = Console.ReadKey(true);
+            ConsoleKeyInfo key;
+            
+            try
+            {
+                key = Console.ReadKey(true); // Tries to read key
+            }
+            catch (InvalidOperationException)
+            {
+                Console.WriteLine("No console available for key input. Press Enter to continue...");
+                Console.ReadLine(); // Fallback for redirected input
+                continue;
+            }
 
             if (!inCombat)
             {
@@ -58,9 +69,17 @@ class Game
         }
     }
 
+
     private void ShowMenu()
     {
-        Console.Clear();
+        try
+        {
+            Console.Clear();
+        }
+        catch (IOException)
+        {
+            Console.WriteLine("\n\n"); // Fallback in case clearing fails
+        }
         Console.WriteLine("Welcome to the game!");
         Console.WriteLine("Press TAB to open inventory.");
         Console.WriteLine("Press 1-5 to equip an item.");
@@ -215,10 +234,6 @@ class Inventory
         for (int i = 0; i < 8; i++)
         {
             itemNames[i] = i < items.Count ? items[i].Name : "";
-        }
-        foreach (string line in rectangle)
-        {
-            Console.WriteLine(string.Format(line, itemNames));
         }
         Console.WriteLine("Press TAB to close inventory.");
     }
