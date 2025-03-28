@@ -16,8 +16,10 @@ class Game
     private Player player = new Player();
     private bool inventoryOpen = false;
     private bool inCombat = false;
+    private int day = 1;
+    private List<int> zombieDistances;
 
-    public void Run() //did not wanna start so i needed to chance the code took me so fucking long!
+    public void Run()
     {
         ShowMenu();
 
@@ -27,12 +29,12 @@ class Game
             
             try
             {
-                key = Console.ReadKey(true); // Tries to read key
+                key = Console.ReadKey(true);
             }
             catch (InvalidOperationException)
             {
                 Console.WriteLine("No console available for key input. Press Enter to continue...");
-                Console.ReadLine(); // Fallback for redirected input
+                Console.ReadLine();
                 continue;
             }
 
@@ -45,6 +47,7 @@ class Game
                 else if (key.Key >= ConsoleKey.D1 && key.Key <= ConsoleKey.D5)
                 {
                     player.EquipItem(key.Key - ConsoleKey.D1);
+                    StartCombat(); // Enter combat after equipping weapon
                 }
                 else if (key.Key == ConsoleKey.D8)
                 {
@@ -59,28 +62,16 @@ class Game
                     StartDay();
                 }
             }
-            else
-            {
-                if (key.Key >= ConsoleKey.D1 && key.Key <= ConsoleKey.D5)
-                {
-                    player.EquipItem(key.Key - ConsoleKey.D1);
-                }
-            }
         }
     }
 
 
     private void ShowMenu()
     {
-        try
-        {
-            Console.Clear();
-        }
-        catch (IOException)
-        {
-            Console.WriteLine("\n\n"); // Fallback in case clearing fails
-        }
-        Console.WriteLine("Welcome to the game!");
+        try { Console.Clear(); }
+        catch (IOException) { Console.WriteLine("\n\n"); }
+
+        Console.WriteLine($"Welcome to the game! (Day {day})");
         Console.WriteLine("Press TAB to open inventory.");
         Console.WriteLine("Press 1-5 to equip an item.");
         Console.WriteLine("Press 8 for more info.");
@@ -136,23 +127,88 @@ class Game
     private void StartDay()
     {
         Console.Clear();
-        Console.WriteLine("A new day has begun!");
+        Console.WriteLine($"A new day has begun! (Day {day})");
         Thread.Sleep(1000);
-        Console.WriteLine("There are 2 zombies");
-        Thread.Sleep(1000);
-        Console.WriteLine("1st zombie is 30 meters away");
-        Thread.Sleep(1000);
-        Console.WriteLine("2nd zombie is 50 meters away");
-        Thread.Sleep(100);
+        
+        zombieDistances = new List<int> { 30, 50 };
+        Console.WriteLine($"There are {zombieDistances.Count} zombies");
+        
+        for (int i = 0; i < zombieDistances.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}st zombie is {zombieDistances[i]} meters away");
+            Thread.Sleep(500);
+        }
+        
         Console.WriteLine("Press 1-5 to equip an item.");
-
-        inCombat = true;
+        inCombat = false;
     }
-}
+
+    private void StartCombat()
+    {
+        while (zombieDistances.Count > 0)
+        {
+            Console.WriteLine("Do you want to (shoot) or (wait)?");
+            string action = Console.ReadLine().ToLower();
+
+            if (action == "wait")
+            {
+                for (int i = 0; i < zombieDistances.Count; i++)
+                {
+                    zombieDistances[i] -= 10;
+                    Console.WriteLine($"{i + 1}st zombie is {zombieDistances[i]} meters away.");
+                }
+            }
+            else if (action == "shoot")
+            {
+                if (player.EquippedWeapon == null)  // Use the stored weapon
+                {
+                    Console.WriteLine("You have no weapon equipped!");
+                    continue;
+                }
+
+                if (zombieDistances.Count > 0)
+                {
+                    int targetDistance = zombieDistances[0];
+
+                    if (targetDistance > player.EquippedWeapon.Range)
+                    {
+                        Console.WriteLine($"You shot, but the zombie was too far away! ({targetDistance} meters)");
+                    }
+                    else
+                    {
+                        int shotsMissed = new Random().Next(1, 6);
+                        Console.WriteLine($"You missed {shotsMissed} shots before hitting the zombie in the head!");
+                        zombieDistances.RemoveAt(0);
+
+                        if (zombieDistances.Count > 0)
+                        {
+                            Console.WriteLine($"{zombieDistances.Count} zombie(s) remaining.");
+                        }
+                    }
+                }
+            }
+
+            if (zombieDistances.Count == 0)
+            {
+                Console.WriteLine("All zombies are dead! Returning to main menu...");
+                Thread.Sleep(2000);
+                day++;
+                ShowMenu();
+                break;
+            }
+            else if (zombieDistances.Capacity == 0)
+            {
+                Console.WriteLine("Lose");
+                Console.ReadLine();
+            }
+        }
+    }
+
 
 class Player
 {
     public Inventory inventory = new Inventory();
+    public Weapon EquippedWeapon { get; private set; }  // Store equipped weapon
 
     public void ShowInventory()
     {
@@ -164,6 +220,7 @@ class Player
         Weapon item = inventory.GetItem(index);
         if (item != null)
         {
+            EquippedWeapon = item;  // Store the equipped weapon
             Console.WriteLine($"You equipped {item.Name}.");
         }
         else
@@ -229,13 +286,19 @@ class Inventory
             "|___________|  |___________|  |___________|  |___________|  |___________|"
         };
 
-        // Fyll inventory med föremål
+        /// Fill inventory with items
         string[] itemNames = new string[8];
         for (int i = 0; i < 8; i++)
         {
             itemNames[i] = i < items.Count ? items[i].Name : "";
         }
-        Console.WriteLine("Press TAB to close inventory.");
+
+        foreach (string line in rectangle)
+        {
+            Console.WriteLine(string.Format(line, itemNames));
+        }
+
+        Console.WriteLine("\nPress TAB to close inventory.");
     }
 
     public Weapon GetItem(int index)
@@ -274,4 +337,5 @@ class Weapon
         Name = name;
         Range = range;
     }
+}
 }
