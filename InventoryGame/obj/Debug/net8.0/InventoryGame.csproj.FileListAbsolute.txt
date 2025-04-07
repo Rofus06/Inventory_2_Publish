@@ -28,3 +28,6 @@ c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\Inventory
 c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\InventoryGame.pdb
 c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\InventoryGame.genruntimeconfig.cache
 c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\ref\InventoryGame.dll
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\bin\Debug\net8.0\Newtonsoft.Json.dll
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\InventoryGame.csproj.AssemblyReference.cache
+c:\Users\Filip.scherlund\Documents\VS code Codes\First-main\First-main\InventoryGame\obj\Debug\net8.0\Inventor.9AC981D5.Up2Date
