@@ -9,6 +9,7 @@ public class API_Inventory
     private const string ApiUrl = "https://67f37807ec56ec1a36d5eb8b.mockapi.io/Inventory/WeaponName";
     private static readonly HttpClient client = new HttpClient();
     private static List<Weapon> cachedWeapons;
+    
 
     public static async Task<List<Weapon>> GetWeaponsAsync()
     {
@@ -18,7 +19,7 @@ public class API_Inventory
         {
             var response = await client.GetStringAsync(ApiUrl);
             var apiWeapons = JsonConvert.DeserializeObject<List<ApiWeapon>>(response);
-            
+
             cachedWeapons = new List<Weapon>();
             foreach (var apiWeapon in apiWeapons)
             {
@@ -29,7 +30,7 @@ public class API_Inventory
                     cachedWeapons.Add(weapon);
                 }
             }
-            
+
             return cachedWeapons;
         }
         catch (Exception)

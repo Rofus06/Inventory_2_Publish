@@ -6,8 +6,15 @@ class Program
 {
     static void Main()
     {
+        Program.TestPolymorphism();
         Game game = new Game();
         game.Run();
+
+    }
+    public static void TestPolymorphism()
+    {
+        GameItem item = new RangedWeapon("Sniper", 200, 5);
+        item.DisplayInfo(); // will call RangedWeapon’s override
     }
 }
 
@@ -20,9 +27,11 @@ class Game
     private List<int> zombieDistances;
     private int currentZombieIndex = 0;
 
+
     public Game()
     {
         player = new Player(day); // Initialize player with current day
+        
     }
 
     public void Run()
@@ -94,7 +103,20 @@ class Game
             StartDay();
         }
     }
+    public class ItemBox<T>
+    {
+        public T Item { get; set; }
 
+        public ItemBox(T item)
+        {
+            Item = item;
+        }
+
+        public void Show()
+        {
+            Console.WriteLine($"Item in box: {Item}");
+        }
+    }
     private void HandleCombatInput()
     {
         Console.Write("\nType a command (shoot, wait, 1-5 to switch Main weapon): ");
@@ -403,7 +425,7 @@ class Inventory
         day = currentDay;
         // Get weapons from API
         items = await API_Inventory.GetWeaponsAsync();
-        
+
         Console.Clear();
         Console.WriteLine("Inventory:");
 
@@ -413,7 +435,13 @@ class Inventory
         {
             itemNames[i] = (i < day) ? items[i].Name : "Locked";
         }
-
+        //Användning av generisk klass ItemBox<T>
+        if (items.Count > 0)
+        {
+            ItemBox<Weapon> box = new ItemBox<Weapon>(items[0]);
+            box.Show(); // detta skriver ut t.ex. "Item in box: Sniper (Range: 200)"
+        }
+        //ritas inventory-boxen
         string[] rectangle =
         {
             "+-----------+  +-----------+  +-----------+  +-----------+  +-----------+",
@@ -443,7 +471,7 @@ class Inventory
     }
 
     public Weapon GetItemByName(string name) => items.Find(item => item.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
-    
+
     public void SwapItems(int index1, int index2)
     {
         if (index1 >= day || index2 >= day) return; // Can't swap with locked items
@@ -467,8 +495,30 @@ public class GameItem
     {
         Console.WriteLine($"Item: {Name}");
     }
+
+    public void VisaVapenInfo(GameItem item)
+    {
+        item.DisplayInfo(); // polymorft: kör rätt metod beroende på objektets verkliga typ
+    }
 }
 
+// Klass för vapen med räckvidd och ammunition
+public class RangedWeapon : Weapon
+{
+    // Antal skott kvar
+    public int Ammo { get; set; }
+
+    // Konstruktor
+    public RangedWeapon(string name, int range, int ammo) : base(name, range)
+    {
+        Ammo = ammo;
+    }
+    // Visar information om vapnet
+    public override void DisplayInfo()
+    {
+        Console.WriteLine($"Ranged Weapon: {Name}, Range: {Range}, Ammo: {Ammo}");
+    }
+}
 public class Weapon : GameItem
 {
     public int Range { get; set; }
@@ -487,4 +537,40 @@ public class Weapon : GameItem
     {
         return $"{Name} (Range: {Range})";
     }
+
+}
+public class WeaponStorage<T>
+{
+    public List<T> Weapons { get; } = new List<T>();
+
+    public void Add(T item) => Weapons.Add(item);
+    public void PrintAll()
+    {
+        foreach (var w in Weapons)
+        {
+            Console.WriteLine(w);
+        }
+    }
+}
+
+public class ItemBox<T>
+{
+    public T Item { get; set; }
+
+    public ItemBox(T item)
+    {
+        Item = item;
+    }
+
+    public void Show()
+    {
+        Console.WriteLine($"Item in box: {Item}");
+    }
+}
+public class SimpleList<T>
+{
+    private List<T> list = new List<T>();
+
+    public void Add(T item) => list.Add(item);
+    public T Get(int index) => list[index];
 }
